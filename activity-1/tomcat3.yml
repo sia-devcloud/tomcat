@@ -38,5 +38,6 @@
         src: "{{ tomcat_url }}"
         dest: "{{ home_dir  }}"
       become: yes
-    - ansible.builtin.debug:
+    - name: print confirmation message
+      ansible.builtin.debug:
            msg: "tomcat is downloaded and extracted to {{ home_dir  }}"
