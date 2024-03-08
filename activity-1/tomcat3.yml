@@ -37,6 +37,7 @@
       ansible.builtin.unarchive:
         src: "{{ tomcat_url }}"
         dest: "{{ home_dir  }}"
+        remote_src: yes
       become: yes
     - name: print confirmation message
       ansible.builtin.debug:
