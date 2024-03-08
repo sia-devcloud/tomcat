@@ -39,4 +39,4 @@
         dest: "{{ home_dir  }}"
       become: yes
     - ansible.builtin.debug:
-         msg: "tomcat is downloaded and extracted to {{ home_dir  }}"
+           msg: "tomcat is downloaded and extracted to {{ home_dir  }}"
