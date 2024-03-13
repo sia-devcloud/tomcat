@@ -41,7 +41,7 @@
         remote_src: yes
       become: yes
     - ansible.builtin.debug:
-           msg: "tomcat is downloaded and extracted to {{ home_dir  }}"
+        msg: "tomcat is downloaded and extracted to {{ home_dir  }}"
    - name: find all the shell files
       find:
         paths: "/opt/tomcat/apache-tomcat-10.0.10/bin"
