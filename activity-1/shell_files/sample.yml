@@ -1,0 +1,10 @@
+- name: test
+  hosts: all
+  tasks:
+    - name: find all the files
+      find:
+        paths: /home/tomcatplay/test
+        patterns: '*.sh'
+        register: shell_files
+      - debug: 
+          var: shell_files
