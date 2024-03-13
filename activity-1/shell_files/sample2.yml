@@ -1,0 +1,16 @@
+- name: test
+  hosts: all
+  tasks:
+    - name: find all the files
+      find:
+        paths: /home/tomcatplay/test
+        patterns: '*.sh'
+      register: shell_files
+    - debug:
+        var: shell_files
+    - file:
+        path: /home/tomcatplay/test/1.sh
+        owner: tomcatplay
+        group: tomcatplay
+        mode: '755'
+#gives execute permission to only 1.sh in /home/tomcatplay/test

@@ -1,0 +1,14 @@
+- name: test
+  hosts: all
+  tasks:
+    - name: find all the files
+      find:
+        paths: /home/tomcatplay/test
+        patterns: '*.sh'
+      register: shell_files
+    - debug:
+        msg: "{{ item.path }}"
+      loop: "{{shell_files.files}}"
+# here we make one change corresponding to previous sample3.yml
+#  that we have total of 10 items i.e 1.sh 2.sh ....10.sh
+# but we cosider only path in each item

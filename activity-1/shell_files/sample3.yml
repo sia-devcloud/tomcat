@@ -7,4 +7,6 @@
         patterns: '*.sh'
       register: shell_files
     - debug:
-        var: shell_files
+        msg: "{{ item }}"
+      loop: "{{shell_files.files}}"
+#here we all the information about the shell files in sample4.yml we will try to get only path output
