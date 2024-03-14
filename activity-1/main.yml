@@ -77,10 +77,4 @@
       ansible.builtin.copy:
         src: files/tomcat.service
         dest: "/etc/systemd/system/tomcat.service"
-    - name: start tomcat
-      ansible.builtin.systemd_service:
-        name: tomcat
-        enabled: yes
-        daemon_reload: yes
-        state: started
 
