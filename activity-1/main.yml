@@ -68,7 +68,7 @@
         mode: '0640'
     - name: allow remote access to host manager
       ansible.builtin.copy:
-        src: hostmanger.xml
+        src: hostmanager.xml
         dest: "/opt/tomcat/apache-tomcat-10.0.10/webapps/host-manager/META-INF/context.xml"
         owner: "{{ user }}"
         group: "{{ group }}"
