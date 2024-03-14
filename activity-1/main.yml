@@ -82,7 +82,7 @@
   handlers:
     - name: start tomcat
       ansible.builtin.systemd:
-        name: tomcat.service
+        name: tomcat
         daemon_reload: yes
         enabled: yes
         state: started
