@@ -61,7 +61,7 @@
         mode: '0600'
     - name: allow remote access to manager
       ansible.builtin.copy:
-        src: files/manager-cotext.xml
+        src: files/manager-context.xml
         dest: "/opt/tomcat/apache-tomcat-10.0.10/webapps/manager/META-INF/context.xml"
         owner: "{{ user }}"
         group: "{{ group }}"
