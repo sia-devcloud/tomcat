@@ -66,7 +66,6 @@
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0640'
-        remote_src: yes
     - name: allow remote access to host manager
       ansible.builtin.copy:
         src: hostmanger.xml
@@ -74,7 +73,6 @@
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0640'
-        remote_src: yes
     - name: create a systemd service file
       ansible.builtin.copy:
         src: files/tomcat.service
