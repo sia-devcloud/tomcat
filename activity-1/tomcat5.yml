@@ -67,14 +67,14 @@
     - name: allow remote access to manager
       ansible.builtin.copy:
         src: files/manager-context.xml
-        dest: /opt/tomcat/apache-tomcat-10.0.10/webapps/manager/META-INF/context.xml
+        dest: "/opt/tomcat/apache-tomcat-10.0.10/webapps/manager/META-INF/context.xml"
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0640'
     - name: allow remote access to host manager
       ansible.builtin.copy:
         src: files/hostmanger-context.xml
-        dest: /opt/tomcat/apache-tomcat-10.0.10/webapps/host-manager/META-INF/context.xml
+        dest: "/opt/tomcat/apache-tomcat-10.0.10/webapps/host-manager/META-INF/context.xml"
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0640'
